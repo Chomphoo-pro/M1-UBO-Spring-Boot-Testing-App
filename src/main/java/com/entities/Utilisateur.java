@@ -1,7 +1,10 @@
 package com.entities;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data //Getters & Setters
 @Entity
 public class Utilisateur {
     @Id
@@ -17,5 +20,7 @@ public class Utilisateur {
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "utilisateur")
     private Responsable responsable;
+
+
 
 }
