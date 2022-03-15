@@ -11,4 +11,7 @@ public class Responsable {
     @JoinColumn(name = "login")
     @MapsId
     private Utilisateur utilisateur;
+
+    @OneToOne
+    private Composante composante;
 }
